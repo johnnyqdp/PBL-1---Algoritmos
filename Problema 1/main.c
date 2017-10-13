@@ -2,34 +2,34 @@
 Autor: Johnny Quest Dantas Pereira
 Componente Curricular: Algoritmos I
 Concluido em: 07/10/2017
-Declaro que este cÛdigo foi elaborado por mim de forma individual e n„o contÈm nenhum
-trecho de cÛdigo de outro colega ou de outro autor, tais como provindos de livros e
-apostilas, e p·ginas ou documentos eletrÙnicos da Internet. Qualquer trecho de cÛdigo
-de outra autoria que n„o a minha est· destacado com uma citaÁ„o para o autor e a fonte
-do cÛdigo, e estou ciente que estes trechos n„o ser„o considerados para fins de avaliaÁ„o.
+Declaro que este c√≥digo foi elaborado por mim de forma individual e n√£o cont√©m nenhum
+trecho de c√≥digo de outro colega ou de outro autor, tais como provindos de livros e
+apostilas, e p√°ginas ou documentos eletr√¥nicos da Internet. Qualquer trecho de c√≥digo
+de outra autoria que n√£o a minha est√° destacado com uma cita√ß√£o para o autor e a fonte
+do c√≥digo, e estou ciente que estes trechos n√£o ser√£o considerados para fins de avalia√ß√£o.
 ********************************************************************************/
 
 //PROGRAMA DE CADASTRO ACS
 
-#include <stdio.h>   //Biblioteca para entrada e saÌda de dados, necess·ria para utilizar os comandos "printf" e "scanf".
-#include <locale.h>  //Biblioteca que possibilita definir a localizaÁ„o do programa.
+#include <stdio.h>   //Biblioteca para entrada e sa√≠da de dados, necess√°ria para utilizar os comandos "printf" e "scanf".
+#include <locale.h>  //Biblioteca que possibilita definir a localiza√ß√£o do programa.
 #include <stdlib.h>  //Biblioteca para poder usar o comando system("cls"), que "limpa" a tela, apaga tudo o que foi escrito.
-int escolha, dia, mes, ano, diaatual=0, mesatual=0, anoatual=0, microcefalia, cardiaco, diabetes, plano, sexo, dataok, etapamenu, confirmacao; //DeclaraÁ„o das vari·veis do tipo int.
-int foiano, foimicro, foicard, foidiabete, foiplano, foimenino, foimenina; //DeclaraÁ„o de vari·veis do tipo int que ser„o utilizadas simulando vari·veis booleanas (true e false com 1 e 0, respectivamente)
-float relat_ano = 0, peso, altura, relat_micro = 0, relat_card = 0, relat_diabetes = 0, relat_plano = 0, relat_meninos = 0, relat_meninas = 0, relat_criancas = 0, mediapeso= 0, relat_peso = 0; //DeclaraÁ„o das vari·veis do tipo float.
+int escolha, dia, mes, ano, diaatual=0, mesatual=0, anoatual=0, microcefalia, cardiaco, diabetes, plano, sexo, dataok, etapamenu, confirmacao; //Declara√ß√£o das vari√°veis do tipo int.
+int foiano, foimicro, foicard, foidiabete, foiplano, foimenino, foimenina; //Declara√ß√£o de vari√°veis do tipo int que ser√£o utilizadas simulando vari√°veis booleanas (true e false com 1 e 0, respectivamente)
+float relat_ano = 0, peso, altura, relat_micro = 0, relat_card = 0, relat_diabetes = 0, relat_plano = 0, relat_meninos = 0, relat_meninas = 0, relat_criancas = 0, mediapeso= 0, relat_peso = 0; //Declara√ß√£o das vari√°veis do tipo float.
 int main(){
-    setlocale(LC_ALL, "Portuguese"); //Definindo a localizaÁ„o do programa para portuguÍs, para poder utilizar caracteres especiais como acentos e Á.
+    setlocale(LC_ALL, "Portuguese"); //Definindo a localiza√ß√£o do programa para portugu√™s, para poder utilizar caracteres especiais como acentos e √ß.
 
-//SolicitaÁ„o da data atual:
-    if(dataok!=2){     //Esse if existe para que a solicitaÁ„o de data aconteÁa apenas no comeÁo do programa.
-        printf("Insira a data de hoje no padr„o dia/mÍs/ano (Exemplo: 3/8/2008)\n->");
-        scanf("%i/%i/%i", &diaatual,&mesatual,&anoatual); //O usu·rio insere o valor das vari·veis correspondentes ‡ dia, mÍs e ano, respectivamente
-        if (diaatual > 31 || diaatual < 1 || mesatual > 12 || mesatual <= 0 || anoatual <= 1000){  //Garante que o usu·rio n„o digite uma data que n„o exista
-            printf("\aData inv·lida\n");
+//Solicita√ß√£o da data atual:
+    if(dataok!=2){     //Esse if existe para que a solicita√ß√£o de data aconte√ßa apenas no come√ßo do programa.
+        printf("Insira a data de hoje no padr√£o dia/m√™s/ano (Exemplo: 3/8/2008)\n->");
+        scanf("%i/%i/%i", &diaatual,&mesatual,&anoatual); //O usu√°rio insere o valor das vari√°veis correspondentes √† dia, m√™s e ano, respectivamente
+        if (diaatual > 31 || diaatual < 1 || mesatual > 12 || mesatual <= 0 || anoatual <= 1000){  //Garante que o usu√°rio n√£o digite uma data que n√£o exista
+            printf("\aData inv√°lida\n");
             return main();
         }
         system("cls");
-        dataok=2; //Garante que o programa n„o pergunte mais a data de hoje
+        dataok=2; //Garante que o programa n√£o pergunte mais a data de hoje
         etapamenu=0; //Inicia o while do menu inicial
     }
 
@@ -37,155 +37,155 @@ int main(){
     while(etapamenu==0){
         printf("\n==============================================================================\n");
         printf("\t\t\t  PROGRAMA DE CADASTRO ACS\n");
-        printf("\t\t\t A data de hoje È %i/%i/%i \n", diaatual,mesatual,anoatual);
+        printf("\t\t\t A data de hoje √© %i/%i/%i \n", diaatual,mesatual,anoatual);
         printf("==============================================================================\n\n");
-        printf("Escolha uma opÁ„o. \n[1]Novo Cadastro \n[2]Visualizar RelatÛrio \n->");
+        printf("Escolha uma op√ß√£o. \n[1]Novo Cadastro \n[2]Visualizar Relat√≥rio \n->");
         scanf("%d", &escolha);
         if (escolha == 1){
-            etapamenu++; //Inicia o laÁo correspondente ‡ solicitaÁ„o da data de nascimento da crianÁa.
+            etapamenu++; //Inicia o la√ßo correspondente √† solicita√ß√£o da data de nascimento da crian√ßa.
         }else if (escolha == 2){
-            etapamenu=9; //Inicia o laÁo correspondente ao relatÛrio.
+            etapamenu=9; //Inicia o la√ßo correspondente ao relat√≥rio.
         }else{
-            printf("\aERRO: Comando inv·lido!");
+            printf("\aERRO: Comando inv√°lido!");
         }
     }
 
-//SolicitaÁ„o da data de nascimento:
+//Solicita√ß√£o da data de nascimento:
     while(etapamenu==1){
-        printf("\nData de nascimento da crianÁa. (Formato dd/mm/aaaa) \n->");
+        printf("\nData de nascimento da crian√ßa. (Formato dd/mm/aaaa) \n->");
         scanf("%d/%d/%d", &dia,&mes,&ano);
         if (ano == anoatual){
-            foiano=1; //"foiano" est· como true, isso significa que, no final do cadastro, eu devo somar 1 no relatÛrio, nessa caracteristica.
-            etapamenu++; //modifica a vari·vel condicional do while para que o programa entre no prÛximo laÁo
-        }else if (ano > anoatual){ //ProÌbe que o usu·rio cadastre uma crianÁa que ainda n„o nasceu
-            printf("\aERRO: Data inv·lida. \n");
-        }else if (ano < (anoatual-12)){ //Se o usu·rio tentar cadastrar uma pessoa que n„o È crianÁa, o programa  volta ao menu iniciar, automaticamente anulando o cadastro que estava sendo feito.
-            printf("\aERRO: Essa pessoa n„o È considerada uma crianÁa \n");
-            system("pause");
-            system("cls");
-            etapamenu=0; //inicia o laÁo correspondente ao menu inicial
+            foiano=1; //"foiano" est√° como true, isso significa que, no final do cadastro, eu devo somar 1 no relat√≥rio, nessa caracteristica.
+            etapamenu++; //modifica a vari√°vel condicional do while para que o programa entre no pr√≥ximo la√ßo
+        }else if (ano > anoatual){ //Pro√≠be que o usu√°rio cadastre uma crian√ßa que ainda n√£o nasceu
+            printf("\aERRO: Data inv√°lida. \n");
+        }else if (ano < (anoatual-12)){ //Se o usu√°rio tentar cadastrar uma pessoa que n√£o √© crian√ßa, o programa  volta ao menu iniciar, automaticamente anulando o cadastro que estava sendo feito.
+            printf("\aERRO: Essa pessoa n√£o √© considerada uma crian√ßa \n");
+            system("pause"); //"Pausa o programa, solicitando que o usu√°rio pressione alguma tecla para continuar"
+            system("cls"); //"Limpa" a tela.
+            etapamenu=0; //inicia o la√ßo correspondente ao menu inicial
             return main();
-        }else if (ano == (anoatual-12)){ //Caso a crianÁa tenha nascido 12 anos atr·s, a estrutura condicional abaixo ir· verificar se ela j· fez anivers·rio, caso tenha feito, o programa apresenta um erro.
+        }else if (ano == (anoatual-12)){ //Caso a crian√ßa tenha nascido 12 anos atr√°s, a estrutura condicional abaixo ir√° verificar se ela j√° fez anivers√°rio, caso tenha feito, o programa apresenta um erro.
             if (mes < mesatual){
-                printf("\aERRO: Essa pessoa n„o È considerada uma crianÁa. \n");
+                printf("\aERRO: Essa pessoa n√£o √© considerada uma crian√ßa. \n");
                 system("pause");
                 system("cls");
-                etapamenu=0; //inicia o laÁo correspondente ao menu inicial
+                etapamenu=0; //inicia o la√ßo correspondente ao menu inicial
             }else if (mes == mesatual && dia < diaatual){
-                printf("\aERRO: Essa pessoa n„o È considerada uma crianÁa. \n");
+                printf("\aERRO: Essa pessoa n√£o √© considerada uma crian√ßa. \n");
                 system("pause");
                 system("cls");
-                etapamenu=0; //inicia o laÁo correspondente ao menu inicial
+                etapamenu=0; //inicia o la√ßo correspondente ao menu inicial
             }else{
-                foiano=0; //"foiano" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-                etapamenu++;
+                foiano=0; //"foiano" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+                etapamenu++; //pula para a pr√≥xima etapa
             }
         }else{
-            foiano=0; //"foiano" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foiano=0; //"foiano" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }
     }
 
-//SolicitaÁ„o do peso da crianÁa: (e altura, que ser· usada para mostrar o IMC da crianÁa)
+//Solicita√ß√£o do peso da crian√ßa: (e altura, que ser√° usada para mostrar o IMC da crian√ßa)
     while(etapamenu==2){
-        printf("\nPeso da crianÁa em kg. (Ex: 13,5)\n->");
-        scanf("%f", &peso);
-        mediapeso=mediapeso+(float)peso;
-        printf("Altura da crianÁa em m. (Ex: 1,30)\n->");
-        scanf("%f", &altura);
-        printf("OBS.: O IMC da crianÁa È %.2f\n", peso/(altura*altura));
-        etapamenu++;
+        printf("\nPeso da crian√ßa em kg. (Ex: 13,5)\n->");
+        scanf("%f", &peso); //o usu√°rio entra um dado do tipo float correspondente ao peso da crian√ßa
+        mediapeso=mediapeso+(float)peso; //o peso inserido √© somado a uma vari√°vel, ao exibir o relat√≥rio, essa vari√°vel ser√° a soma de todos os pesos, que vai ser dividida pela quantidade de crian√ßas cadastradas para exibir a m√©dia
+        printf("Altura da crian√ßa em m. (Ex: 1,30)\n->");
+        scanf("%f", &altura); //entrada da aultura da crian√ßa, apenas para calcular o IMC.
+        printf("OBS.: O IMC da crian√ßa √© %.2f\n", peso/(altura*altura));
+        etapamenu++; //pula para a pr√≥xima etapa
     }
 
 //Pergunta "Possui Microcefalia?":
     while(etapamenu==3){
-        printf("\nPossui microcefalia? \n[1] Sim\n[2] N„o\n->");
+        printf("\nPossui microcefalia? \n[1] Sim\n[2] N√£o\n->");
         scanf("%d", &microcefalia);
         if (microcefalia == 1){
-            foimicro=1; //"foimicro" est· como true, isso significa que, no final do cadastro, eu devo somar 1 no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foimicro=1; //"foimicro" est√° como true, isso significa que, no final do cadastro, eu devo somar 1 no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }else if (microcefalia != 2){
-            printf("\aERRO: Comando inv·lido!\n");
+            printf("\aERRO: Comando inv√°lido!\n");
         }else{
-            foimicro=0; //"foimicro" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foimicro=0; //"foimicro" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }
     }
 
-//Pergunta "Possui Problema CardÌaco?":
+//Pergunta "Possui Problema Card√≠aco?":
     while(etapamenu==4){
-        printf("\nPossui problema cardÌaco? \n[1] Sim\n[2] N„o\n->");
+        printf("\nPossui problema card√≠aco? \n[1] Sim\n[2] N√£o\n->");
         scanf("%d", &cardiaco);
         if (cardiaco == 1){
-            foicard=1; //"foicard" est· como true, isso significa que, no final do cadastro, eu devo somar 1 no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foicard=1; //"foicard" est√° como true, isso significa que, no final do cadastro, eu devo somar 1 no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }else if (cardiaco  != 2){
-            printf("\aERRO: Comando inv·lido!\n");
+            printf("\aERRO: Comando inv√°lido!\n");
         }else{
-            foicard=0; //"foicard" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foicard=0; //"foicard" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }
     }
 
 //Pergunta "Possui Diabetes?":
     while(etapamenu==5){
-        printf("\nPossui diabetes? \n[1] Sim\n[2] N„o\n->");
+        printf("\nPossui diabetes? \n[1] Sim\n[2] N√£o\n->");
         scanf("%d", &diabetes);
         if (diabetes == 1){
-            foidiabete=1; //"foidiabete" est· como true, isso significa que, no final do cadastro, eu devo somar 1 no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foidiabete=1; //"foidiabete" est√° como true, isso significa que, no final do cadastro, eu devo somar 1 no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }else if (diabetes  != 2){
-            printf("\aERRO: Comando inv·lido!\n");
+            printf("\aERRO: Comando inv√°lido!\n");
         }else{
-            foidiabete=0; //"foidiabete" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foidiabete=0; //"foidiabete" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }
     }
 
-//Pergunta "Possui plano de sa˙de?":
+//Pergunta "Possui plano de sa√∫de?":
     while(etapamenu==6){
-        printf("\nPossui plano de sa˙de? \n[1] Sim\n[2] N„o\n->");
+        printf("\nPossui plano de sa√∫de? \n[1] Sim\n[2] N√£o\n->");
         scanf("%d", &plano);
         if (plano ==2){
-            foiplano=1; //"foiplano" est· como true, isso significa que, no final do cadastro, eu devo somar 1 no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foiplano=1; //"foiplano" est√° como true, isso significa que, no final do cadastro, eu devo somar 1 no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }else if (plano != 1){
-            printf("\aERRO: Comando inv·lido! \n");
+            printf("\aERRO: Comando inv√°lido! \n");
         }else{
-            foiplano=0; //"foiplano" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foiplano=0; //"foiplano" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }
     }
 
-//Pergunta "Sexo da crianÁa?":
+//Pergunta "Sexo da crian√ßa?":
     while(etapamenu==7){
-        printf("\nSexo da crianÁa: \n[1] Masculino\n[2] Feminino\n->");
+        printf("\nSexo da crian√ßa: \n[1] Masculino\n[2] Feminino\n->");
         scanf("%d", &sexo);
         if (sexo == 1){
-            foimenino=1; //"foimenino" est· como true, isso significa que, no final do cadastro, eu devo somar 1 no relatÛrio, nessa caracteristica.
-            foimenina=0; //"foimenina" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foimenino=1; //"foimenino" est√° como true, isso significa que, no final do cadastro, eu devo somar 1 no relat√≥rio, nessa caracteristica.
+            foimenina=0; //"foimenina" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }else if (sexo == 2){
-            foimenino=0; //"foimenino" est· como false, isso significa que, no final do cadastro, eu n„o devo somar nada no relatÛrio, nessa caracteristica.
-            foimenina=1; //"foimenina" est· como true, isso significa que, no final do cadastro, eu devo somar 1 no relatÛrio, nessa caracteristica.
-            etapamenu++;
+            foimenino=0; //"foimenino" est√° como false, isso significa que, no final do cadastro, eu n√£o devo somar nada no relat√≥rio, nessa caracteristica.
+            foimenina=1; //"foimenina" est√° como true, isso significa que, no final do cadastro, eu devo somar 1 no relat√≥rio, nessa caracteristica.
+            etapamenu++; //pula para a pr√≥xima etapa
         }else{
-            printf("\aERRO: Comando inv·lido! \n");
+            printf("\aERRO: Comando inv√°lido! \n");
         }
     }
 
-//A confirmaÁ„o do Cadastro, onde o usu·rio vai visualizar os dados que inseriu e decidir se tais informaÁıes ser„o somadas ao relatÛrio ou n„o:
+//A confirma√ß√£o do Cadastro, onde o usu√°rio vai visualizar os dados que inseriu e decidir se tais informa√ß√µes ser√£o somadas ao relat√≥rio ou n√£o:
     while(etapamenu==8){
-        printf("As informaÁıes que vocÍ prestou foram as seguintes:\n\n\tData de nascimento: %d/%d/%d; \n\t", dia,mes,ano);
+        printf("As informa√ß√µes que voc√™ prestou foram as seguintes:\n\n\tData de nascimento: %d/%d/%d; \n\t", dia,mes,ano);
         printf("Peso: %.2f kg\n\t", peso);
-        if (foimicro==1) printf("Possui microcefalia;\n\t"); else printf("N„o possui microcefalia;\n\t");
-        if (foicard==1) printf("Possui problema cardÌaco;\n\t"); else printf("N„o possui problema cardÌaco;\n\t");
-        if (foidiabete==1) printf("Possui diabetes;\n\t"); else printf ("N„o possui diabetes;\n\t");
-        if (foiplano==0) printf ("Possui plano de sa˙de;\n\t"); else printf("N„o possui plano de sa˙de;\n\t");
-        if (foimenino==1) printf("Sexo masculino.\n\n"); else printf("Sexo feminino.\n\n");
-        printf("DESEJA CONFIRMAR ESSE CADASTRO?\n[1] Sim\n[2] N„o\n->");
+        if (foimicro==1) printf("Possui microcefalia;\n\t"); else printf("N√£o possui microcefalia;\n\t"); //lembrando que foimicro assume 1 para sim e 0 para n√£o
+        if (foicard==1) printf("Possui problema card√≠aco;\n\t"); else printf("N√£o possui problema card√≠aco;\n\t"); //lembrando que foicard assume 1 para sim e 0 para n√£o
+        if (foidiabete==1) printf("Possui diabetes;\n\t"); else printf ("N√£o possui diabetes;\n\t"); //lembrando que foidiabete assume 1 para sim e 0 para n√£o
+        if (foiplano==0) printf ("Possui plano de sa√∫de;\n\t"); else printf("N√£o possui plano de sa√∫de;\n\t"); //lembrando que foiplano assume 1 para n√£o e 0 para sim
+        if (foimenino==1) printf("Sexo masculino.\n\n"); else printf("Sexo feminino.\n\n"); //lembrando que quando for menino, foimenino assume 1 e foimenina assume 0, quando for menina, foimenino assume 0 e foimenina assume 1
+        printf("DESEJA CONFIRMAR ESSE CADASTRO?\n[1] Sim\n[2] N√£o\n->");
         scanf("%d", &confirmacao);
-        if(confirmacao==1){
+        if(confirmacao==1){ //Nesse la√ßo √© efetuado o processo de soma nas vari√°veis do relat√≥rio baseando-se nas respostas que o usu√°rio digitou
             relat_criancas=relat_criancas+1;
             if (foiano==1) relat_ano=relat_ano+1;
             if (foimicro==1) relat_micro=relat_micro+1;
@@ -194,52 +194,53 @@ int main(){
             if (foiplano==1) relat_plano=relat_plano+1;
             if (foimenino==1) relat_meninos=relat_meninos+1;
             if (foimenina==1) relat_meninas=relat_meninas+1;
-            printf("\nCadastro concluÌdo com sucesso!\n");
-            system("pause");
-            system("cls");
+            printf("\nCadastro conclu√≠do com sucesso!\n");
+            system("pause"); //"Pausa o programa, solicitando que o usu√°rio pressione alguma tecla para continuar"
+            system("cls"); //"Limpa" a tela
             etapamenu=0;
             return main();
-        }else if (confirmacao==2){
+        }else if (confirmacao==2){ //Caso o usu√°rio cancele o cadastro, nenhuma vari√°vel √© somada, portanto, nada muda no relat√≥rio
             printf("\a\nCadastro cancelado!");
-            system("pause");
-            system("cls");
+            system("pause"); //"Pausa o programa, solicitando que o usu√°rio pressione alguma tecla para continuar"
+            system("cls"); //"Limpa" a tela
             etapamenu=0;
             return main();
         } else{
-            printf("\aComando inv·lido!");
+            printf("\aComando inv√°lido!");
         }
 
     }
 
-////RELAT”RIO:
-    while(etapamenu==9){
+////RELAT√ìRIO:
+    while(etapamenu==9){ //la√ßo de exibi√ß√£o do relat√≥rio, aqui, todas as vari√°veis de relat√≥rio s√£o exibidas, al√©m de porcentagens em rela√ß√£o ao total
         if(relat_criancas>0){
-            float porcent_ano = (relat_ano*100)/relat_criancas, porcent_micro = (relat_micro*100)/relat_criancas, porcent_card = (relat_card*100)/relat_criancas, porcent_diabetes = (relat_diabetes*100)/relat_criancas, porcent_plano= (relat_plano*100)/relat_criancas , porcent_menino= (relat_meninos*100)/relat_criancas, porcent_menina = (relat_meninas*100)/relat_criancas, relat_peso = (mediapeso/relat_criancas);
-            printf("\n\n ##### RELAT”RIO ##### \n\n");
-            printf("CRIAN«AS CADASTRADAS: %.0f \n", relat_criancas);
-            printf("CrianÁas nascidas no ano corrente: %.0f", relat_ano);
+            float porcent_ano = (relat_ano*100)/relat_criancas, porcent_micro = (relat_micro*100)/relat_criancas, porcent_card = (relat_card*100)/relat_criancas, porcent_diabetes = (relat_diabetes*100)/relat_criancas, porcent_plano= (relat_plano*100)/relat_criancas , porcent_menino= (relat_meninos*100)/relat_criancas, porcent_menina = (relat_meninas*100)/relat_criancas; //declara√ß√£o das vari√°veis de porcentagem juntamente dos seus respectivos c√°lculos.
+            float relat_peso = (mediapeso/relat_criancas); //declara√ß√£o da vari√°vel da media do peso das crian√ßas, onde mediapeso (a soma de todos os pesos inseridos) √© dividida pelo total de crian√ßas
+            printf("\n\n ##### RELAT√ìRIO ##### \n\n");
+            printf("CRIAN√áAS CADASTRADAS: %.0f \n", relat_criancas);
+            printf("Crian√ßas nascidas no ano corrente: %.0f", relat_ano);
                 printf("              (%.1f %% do total) \n", porcent_ano);
-            printf("Quantidade de crianÁas com microcefalia: %.0f", relat_micro);
+            printf("Quantidade de crian√ßas com microcefalia: %.0f", relat_micro);
                 printf("        (%.1f %% do total) \n", porcent_micro);
-            printf("Quantidade de crianÁas com problema cardÌaco: %.0f", relat_card);
+            printf("Quantidade de crian√ßas com problema card√≠aco: %.0f", relat_card);
                 printf("   (%.1f %% do total) \n", porcent_card);
-            printf("Quantidade de crianÁas com diabetes: %.0f", relat_diabetes);
+            printf("Quantidade de crian√ßas com diabetes: %.0f", relat_diabetes);
                 printf("            (%.1f %% do total) \n", porcent_diabetes);
-            printf("Quantidade de crianÁas sem plano de sa˙de: %.0f", relat_plano);
+            printf("Quantidade de crian√ßas sem plano de sa√∫de: %.0f", relat_plano);
                 printf("      (%.1f %% do total) \n", porcent_plano);
             printf("Quantidade de meninos: %.0f", relat_meninos);
                 printf("                          (%.1f %% do total) \n", porcent_menino);
             printf("Quantidade de meninas: %.0f", relat_meninas);
                 printf("                          (%.1f %% do total) \n", porcent_menina);
-            printf("MÈdia de peso entre as crianÁas: %.2fkg \n\n\n\n", relat_peso);
-            system("pause");
-            system("cls");
-            etapamenu=0;
+            printf("M√©dia de peso entre as crian√ßas: %.2fkg \n\n\n\n", relat_peso);
+            system("pause"); //"Pausa o programa, solicitando que o usu√°rio pressione alguma tecla para continuar"
+            system("cls"); //"Limpa" a tela
+            etapamenu=0; //inicia o la√ßo correspondente ao menu principal
             return main();
         }else{
-            printf("\a ERRO: FaÁa algum cadastro antes! \n\n");    //Essa mensagem È exibida caso o usu·rio tente visualizar o relatÛrio sem ter feito nenhum cadastro antes.
-            system("pause");
-            system("cls");
+            printf("\a ERRO: Fa√ßa algum cadastro antes! \n\n");    //Essa mensagem √© exibida caso o usu√°rio tente visualizar o relat√≥rio sem ter feito nenhum cadastro antes.
+            system("pause"); //"Pausa o programa, solicitando que o usu√°rio pressione alguma tecla para continuar"
+            system("cls"); //"Limpa" a tela
             etapamenu=0;
             return main();
         }
